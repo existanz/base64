@@ -1,0 +1,32 @@
+<div class="translator-container">
+  <h1>Base64 Переводчик</h1>
+
+  <div class="lang-panel">
+    <span class="lang-tab active">{{ sourceLabel() }}</span>
+    <button class="swap-btn" (click)="swapModes()" title="Поменять направление">⇄</button>
+    <span class="lang-tab active">{{ targetLabel() }}</span>
+  </div>
+
+  <div class="work-zone">
+    <div class="box-input">
+      <textarea 
+        [(ngModel)]="inputText" 
+        placeholder="Введите текст для перевода...">
+      </textarea>
+    </div>
+
+    <div class="box-output">
+      <textarea 
+        [value]="outputText()" 
+        readonly 
+        placeholder="Перевод появится здесь...">
+      </textarea>
+    </div>
+  </div>
+
+  <div class="action-panel">
+    <button class="action-btn" (click)="swapModes()">
+      Режим: {{ buttonText() }}
+    </button>
+  </div>
+</div>
