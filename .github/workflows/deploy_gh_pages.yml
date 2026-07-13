@@ -28,7 +28,7 @@ jobs:
       run: npm install
 
     - name: Build Angular app
-      run: ng build
+      run: ng build --base-href '/base64'
     
     - name: Deploy to ghpages
       uses: peaceiris/actions-gh-pages@v4
